@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<main>
+    <main>
             <div class="info">
                     <h3 style="color:red;">Create </h3> 
                     <h3>Your Account</h3>
