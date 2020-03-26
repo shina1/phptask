@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp|Form</title>
-    <link href="index.css">
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
 <main>
             <div class="info">
-                    <h3>Create </h3> 
+                    <h3 style="color:red;">Create </h3> 
                     <h3>Your Account</h3>
             </div>  
         <div class="login-form form-control">
