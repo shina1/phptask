@@ -1,7 +1,9 @@
 <?php 
 session_start();
-$userName = $_SESSION['name'];
-echo $userName;
+     $userName =  $_SESSION['name'];
+	 $userNumber = $_SESSION['number'];
+     $userMail = $_SESSION['email'];
+     $userLocation =  $_SESSION['city'];
 ?>
 
 
@@ -65,15 +67,15 @@ main{
     <main>
             <div class="card">
                 <div class="crd-hd">
-                <h2>Abdulmaleek Wasiu Shina</h2>
+                <h2><?php echo $userName; ?></h2>
                 </div>
 
                 <div class="crd-bdy">
                     <h3>Welcome!</h3>
                 <div class="details">
-                    <p>Email:</p>
-                    <p>Phone Number: </p>
-                    <p>City: </p>
+                    <p>Email: <?php echo $userMail;?></p>
+                    <p>Phone Number: <?php echo $userNumber; ?> </p>
+                    <p>City: <?php echo $userLocation; ?> </p>
                 </div>
                 
                 </div>

@@ -1,7 +1,17 @@
 <?php  session_start();
   
-    $userName = $_SESSION['name'];
-    echo($userName);
+  if(isset($_POST['submit'])){
+	$bring = $_POST['submit'];
+	$fullname = $_POST['fullname'];
+	$number = $_POST['number'];
+    $Mail = $_POST['email'];
+    $city = $_POST['city'];
+	$_SESSION['name'] = $fullname;
+	$_SESSION['number'] = $number;
+    $_SESSION['email'] = $Mail;
+    $_SESSION['city'] = $city;
+	header('location:dashBoard.php');
+}
 
 
 ?>
@@ -21,8 +31,8 @@
                     <h3>Your Account</h3>
             </div>  
         <div class="login-form form-control">
-            <form action="dashBoard.php" method="get" id="form">
-                <div id="input" class="input4"><input type="text" name="name" id="name" placeholder="Full Name" autofocus></div>
+            <form  method="POST" id="form">
+                <div id="input" class="input4"><input type="text" name="fullname" id="name" placeholder="Full Name" autofocus></div>
                 <div id="input" class="input1"><input type="text" name="number" id="number" placeholder="Phone Number" autofocus></div>
                 <div id="input" class="input2"><input type="email" name="email" id="email" placeholder="Email" autofocus></div>
                 <div id="input" class="input5"><input type="city" name="city" id="city" placeholder="City" autofocus></div>
@@ -30,7 +40,7 @@
 
                 <div class="form-break">
                     <p><a href="forgotaccount.html">Forgot Account?</a></p>
-                    <input type="submit" value="SIGN UP" id="signup">
+                    <input type="submit" value="SIGN UP" id="signup" name='submit'>
                 </div>
             </form>
             <div class="line">
